@@ -20,7 +20,7 @@ Add these lines to your `config.ru`. (These lines should be added above the `req
     # Max requests per worker
     use Unicorn::WorkerKiller::MaxRequests, 3072, 4096
     
-    # Max memory size (RSS) per worker
+    # Max memory size (RSS) per worker in bytes
     use Unicorn::WorkerKiller::Oom, (192*(1024**2)), (256*(1024**2))
 
 This gem provides two modules.
